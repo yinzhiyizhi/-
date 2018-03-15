@@ -13,3 +13,9 @@
 # 挑战 
 # 要求时间复杂度为O(n)，空间复杂度为O(1)
 
+class Solution:
+    # @param k & A a integer and an array
+    # @return ans a integer
+    def kthLargestElement(self, k, A):
+        A.sort()
+        return A[len(A)-k]
