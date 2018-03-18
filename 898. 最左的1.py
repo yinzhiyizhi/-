@@ -23,9 +23,11 @@ class Solution:
     """
     def getColumn(self, arr):
         # Write your code here
-        n=0
-        for i in range(0,1001):
-            if arr[0][i]==1 or arr[1][i]==1:
-                n=i
-                break
-        return n    
+        i=0
+        j=len(arr[0])-1
+        while i<len(arr) and j>=0:
+            if arr[i][j]==1:
+                j-=1
+            elif arr[i][j]==0:
+                i+=1
+        return j+1        
